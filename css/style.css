@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Playfair+Display & display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: black;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    background-image: url(../img/02.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 35px;
+    color: #997878;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu .navbar ul li a {
+    font-size: 24px;
+    padding: 20px;
+    color: white;
+    /* display: block; */
+}
+
+.menu .navbar ul li a:hover{
+    color: red;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.header-content{
+    display: flex;
+    width: 100%;
+}
+
+.header-1{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-self: flex-end;
+}
+
+.header-2 {
+    width: 50%;
+    margin-top: 80px;
+    text-align: end;
+}
+
+.header-2 h1{
+    color: #0bf15872;
+    font-size: 80px;
+    line-height: 80px;
+}
+
+.header-2 img{
+    width: 60px;
+}
+
+.boton-1 {
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 60px;
+}
+
+.boton-2{
+    width: 110px;
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: red;
+    font-size: 20px;
+    margin-top: 30px;
+    color: white;
+    border-radius: 60px;
+}
+
+
+.movies { 
+    padding: 50px 0 0 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 2px solid red;
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+
+.movie-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.box-container-1 ,
+.box-container-2 ,
+.box-container-3 {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 40px;
+}
+
+.box-1 ,
+.box-2 ,
+.box-3 {
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+}
+
+.box-1:nth-child(1),
+.box-1:nth-child(2),
+.box-1:nth-child(3),
+.box-1:nth-child(4) {
+    display: inline-block;
+}
+
+.box-2:nth-child(1),
+.box-2:nth-child(2),
+.box-2:nth-child(3),
+.box-2:nth-child(4) {
+    display: inline-block;
+}
+
+.box-3:nth-child(1),
+.box-3:nth-child(2),
+.box-3:nth-child(3),
+.box-3:nth-child(4) {
+    display: inline-block;
+}
+
+
+.load-more{
+    margin-top: 40px;
+    display: inline-block;
+    padding: 10px  25px;
+    border-radius: 20px;
+    border: 1px solid orange;
+    color: orange;
+    font-size: 17px;
+    cursor: pointer;
+    align-self: flex-end;
+
+    &:hover {
+        background-color: red;
+        color: white;
+    }
+}
+
+
+.content img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.content {
+    color: grey;
+    font-size: 20px;
+}
+
+
+/* QUIENES SOMOS */
+
+.titulo{
+    color: #0df854;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: title-animation 3s infinite;
+}
+
+@keyframes title-animation {
+    0% { transform: scale(1);}
+    50% { transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+.parrafo { 
+    text-align: justify;
+    margin: 60px 100px;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.5;
+}
+
+/* CONTACTO */
+.titulo-contacto{
+        color: #0df854;
+        font-size: 100px;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        animation-name: animate__bounceInDown;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+        animation-fill-mode: both;
+
+    }
+
+.contacto {
+    font-size: 200px;
+    text-align: center;
+    color: red;
+}
+
+
+
+
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+    margin-top: 100px;
+    border-top: 2px solid red;
+}
+
+.footer ul {
+    display: flex;
+
+}
+
+.footer h3{
+    font-size: 40px;
+}
+
+.footer a {
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+    display: block;
+
+    &:hover {
+        color: red;
+    }
+    
+}
+
+.bi-instagram:hover{
+    color: #f006b5;
+}
+
+.bi-facebook:hover{
+    color: #3d40f0;
+}
+
+.bi-whatsapp:hover{
+    color: #0df854;
+}
+
+.bi-github:hover {
+    color: #463a3a;
+}
+
+.bi-c-circle {
+    font-size: 10px;
+
+}
+
+
+
