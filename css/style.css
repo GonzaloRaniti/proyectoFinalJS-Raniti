@@ -1,8 +1,7 @@
-
 @import url('https://fonts.googleapis.com/css2? family= Playfair+Display & display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,18 +9,18 @@
     list-style: none;
 }
 
-body{
+body {
     background-color: black;
     font-family: 'Bebas Neue', sans-serif;
     color: white;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.header{
+.header {
     background-image: url(../img/02.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -32,7 +31,7 @@ body{
     width: 100%;
 }
 
-.menu{
+.menu {
     position: absolute;
     top: 0;
     left: 0;
@@ -42,7 +41,7 @@ body{
     justify-content: space-between;
 }
 
-.logo{
+.logo {
     font-size: 35px;
     color: #997878;
 }
@@ -61,29 +60,29 @@ body{
     /* display: block; */
 }
 
-.menu .navbar ul li a:hover{
+.menu .navbar ul li a:hover {
     color: red;
 }
 
-#menu{
+#menu {
     display: none;
 }
 
-.menu-icono{
+.menu-icono {
     width: 25px;
 }
 
-.menu label{
+.menu label {
     cursor: pointer;
     display: none;
 }
 
-.header-content{
+.header-content {
     display: flex;
     width: 100%;
 }
 
-.header-1{
+.header-1 {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -96,13 +95,13 @@ body{
     text-align: end;
 }
 
-.header-2 h1{
+.header-2 h1 {
     color: #0bf15872;
     font-size: 80px;
     line-height: 80px;
 }
 
-.header-2 img{
+.header-2 img {
     width: 60px;
 }
 
@@ -115,7 +114,7 @@ body{
     border-radius: 60px;
 }
 
-.boton-2{
+.boton-2 {
     width: 110px;
     display: inline-block;
     padding: 7px 20px;
@@ -127,7 +126,7 @@ body{
 }
 
 
-.movies { 
+.movies {
     padding: 50px 0 0 0;
     display: flex;
     flex-direction: column;
@@ -146,23 +145,23 @@ hr {
 }
 
 
-.movie-container{
+.movie-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
 }
 
-.box-container-1 ,
-.box-container-2 ,
+.box-container-1,
+.box-container-2,
 .box-container-3 {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
 }
 
 
-.box-1 ,
-.box-2 ,
+.box-1,
+.box-2,
 .box-3 {
     border-radius: 5px;
     z-index: 1000;
@@ -191,10 +190,10 @@ gap: 40px;
 }
 
 
-.load-more{
+.load-more {
     margin-top: 40px;
     display: inline-block;
-    padding: 10px  25px;
+    padding: 10px 25px;
     border-radius: 20px;
     border: 1px solid orange;
     color: orange;
@@ -227,7 +226,7 @@ gap: 40px;
 
 /* QUIENES SOMOS */
 
-.titulo{
+.titulo {
     color: #0df854;
     font-size: 100px;
     text-align: center;
@@ -236,12 +235,20 @@ gap: 40px;
 }
 
 @keyframes title-animation {
-    0% { transform: scale(1);}
-    50% { transform: scale(1.2);}
-    100% {transform: scale(1);}
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
-.parrafo { 
+.parrafo {
     text-align: justify;
     margin: 60px 100px;
     font-size: 20px;
@@ -250,27 +257,27 @@ gap: 40px;
 }
 
 /* CONTACTO */
-.titulo-contacto{
-        color: #0df854;
-        font-size: 100px;
-        text-align: center;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        animation-name: animate__bounceInDown;
-        animation-duration: 1s;
-        animation-delay: 0.5s;
-        animation-fill-mode: both;
+.titulo-contacto {
+    color: #0df854;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation-name: animate__bounceInDown;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
 
-    }
+}
 
 .contacto {
-    font-size: 200px;
+    font-size: 100px;
     text-align: center;
     color: red;
 }
 
 /* FOOTER */
 
-.footer{
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -284,7 +291,7 @@ gap: 40px;
 
 }
 
-.footer h3{
+.footer h3 {
     font-size: 40px;
 }
 
@@ -297,18 +304,18 @@ gap: 40px;
     &:hover {
         color: red;
     }
-    
+
 }
 
-.bi-instagram:hover{
+.bi-instagram:hover {
     color: #f006b5;
 }
 
-.bi-facebook:hover{
+.bi-facebook:hover {
     color: #3d40f0;
 }
 
-.bi-whatsapp:hover{
+.bi-whatsapp:hover {
     color: #0df854;
 }
 
@@ -327,29 +334,68 @@ gap: 40px;
 
 /* MEDIAS QUIERIES */
 
-@media (max-width:480px){
-    .parrafo{
-        font-size: 17px;
-        width: 100%;
-        font-weight: bold;
-        text-align: justify;
+
+@media (max-width:991px) {
+    .menu {
+        padding: 20px;
     }
 
-    .titulo{
-        width: 100%;
-        text-align: center;
-
-    }
-    
-    h1{
-        width: 100%;
-        color: grey;
+    .menu label {
+        display: initial;
     }
 
-    .footer{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 30px;
+    .menu .navbar {
+        position: relative;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #030303;
+        display: none;
     }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+        .boton-1 {
+            display: none;
+        }
+
+        #menu:checked ~ .navbar {
+            display: initial;
+        }
+
+        .header-content{
+            flex-direction: column;
+            padding: 180px 30px 30px 30px;
+        }
+
+        .header-1 {
+            width: 100%;
+            align-items: center;
+        }
+
+        .header-2 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .movies {
+            padding: 30px 100px;
+
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding: 30px;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer ul {
+            margin-top: 15px;
+            justify-content: center;
+        }
+
 }
+
