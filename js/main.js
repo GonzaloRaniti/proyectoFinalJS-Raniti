@@ -1,6 +1,5 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Aquí va todo tu código JavaScript actual
     let loadMoreBoton1 = document.querySelector('#load-more-1');
     let currentItem1 = 4;
 
@@ -61,15 +60,14 @@ form.addEventListener('submit', function (event) {
         mensaje: mensaje
     };
 
-
     const jsonData = JSON.stringify(data);
-
 
     localStorage.setItem('formularioContacto', jsonData);
 
-
     form.reset();
 
+
+    //SEEWT ALERT
     const btn = document.querySelector('#btn');
 
     btn.addEventListener('click', miAlerta);
