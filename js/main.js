@@ -1,142 +1,74 @@
-// let nombre = prompt("Elegir pelicula")
-// let genero = prompt("Accion o Romance")
-// let year = prompt("Elegir año")
-// let pais = prompt("Elegir país")
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Aquí va todo tu código JavaScript actual
+    let loadMoreBoton1 = document.querySelector('#load-more-1');
+    let currentItem1 = 4;
 
-// const  infoBusqueda = {
-//     nombre: nombre,
-//     genero: genero,
-//     year: year,
-//     pais: pais,
-
-// }
-
-// function mostrarPeliculas(peliculas){
-//     peliculas.forEach( pelicula => {
-//         console.log(pelicula.nombre + " " + pelicula.genero + " " + pelicula.duracion  + " " + pelicula.year +  " " + pelicula.estreno  +  " "  + pelicula.pais + " " + pelicula.presupuesto + " " + pelicula.recaudacion + " ")
-
-//     })
-// }
-
-
-
-
-// function filtrarNombre(pelicula){
-//     if(infoBusqueda.nombre){
-//         return pelicula.nombre == infoBusqueda.nombre
-//     }
-//     return pelicula;
-// }
-
-// function filtrarGenero(pelicula){
-//     if(infoBusqueda.genero){
-//         return pelicula.genero == infoBusqueda.genero
-//     }
-//     return pelicula;
-// }
-
-// function filtrarDuracion(pelicula){
-//     if(infoBusqueda.duracion){
-//         return pelicula.duracion == infoBusqueda.duracion
-//     }
-//     return pelicula;
-// }
-
-
-// function filtrarEuracion(pelicula){
-//     if(infoBusqueda.estreno){
-//         return pelicula.estreno == infoBusqueda.estreno
-//     }
-//     return pelicula;
-// }
-
-
-// function filtrarYear(pelicula){
-//     if(infoBusqueda.year){
-//         return pelicula.year == infoBusqueda.year
-//     }
-//     return pelicula;
-// }
-
-
-// function filtrarPais(pelicula){
-//     if(infoBusqueda.pais){
-//         return pelicula.pais == infoBusqueda.pais
-//     }
-//     return pelicula;
-// }
-
-
-
-
-
-// function filtrarPelicula(){
-//     let resultado = peliculas.filter(filtrarNombre).filter(filtrarGenero).filter(filtrarYear).filter(filtrarPais)
-//     console.log(resultado.length)
-//     if(resultado.length){
-//         mostrarPeliculas(resultado)
-//     }else {
-//         noHayresultado(resultado)
-//     }
-// }
-
-// function noHayresultado(){
-//     console.log("No hay resultados")
-// }
-
-// filtrarPelicula()
-
-
-
-let loadMoreBoton1 = document.querySelector('#load-more-1');
-let currentItem1 = 4;
-
-loadMoreBoton1.onclick  = () => {
-    let boxes = [...document.querySelectorAll (
-        '.box-container-1 .box-1'
-    )];
-    for( let i = currentItem1; i < currentItem1 + 4; i++) {
-        boxes[i].style.display = 'inline-block';
-    }
-    currentItem1 +=4;
-    if(currentItem1 >= boxes.length) {
-        loadMoreBoton1.style.display = 'none';
+    loadMoreBoton1.onclick = () => {
+        let boxes = Array.from(document.querySelectorAll('.box-container-1 .box-1'));
+        for (let i = currentItem1; i < currentItem1 + 4; i++) {
+            boxes[i].style.display = 'inline-block';
+        }
+        currentItem1 += 4;
+        if (currentItem1 >= boxes.length) {
+            loadMoreBoton1.style.display = 'none';
+        }
     }
 
-}
+    let loadMoreBoton2 = document.querySelector('#load-more-2');
+    let currentItem2 = 4;
 
-let loadMoreBoton2 = document.querySelector('#load-more-2');
-let currentItem2 = 4;
-
-loadMoreBoton2.onclick  = () => {
-    let boxes = [...document.querySelectorAll (
-        '.box-container-2 .box-2'
-    )];
-    for( let i = currentItem2; i < currentItem2 + 4; i++) {
-        boxes[i].style.display = 'inline-block';
-    }
-    currentItem2 +=4;
-    if(currentItem2 >= boxes.length) {
-        loadMoreBoton2.style.display = 'none';
+    loadMoreBoton2.onclick = () => {
+        let boxes = Array.from(document.querySelectorAll('.box-container-2 .box-2'));
+        for (let i = currentItem2; i < currentItem2 + 4; i++) {
+            boxes[i].style.display = 'inline-block';
+        }
+        currentItem2 += 4;
+        if (currentItem2 >= boxes.length) {
+            loadMoreBoton2.style.display = 'none';
+        }
     }
 
-}
+    let loadMoreBoton3 = document.querySelector('#load-more-3');
+    let currentItem3 = 4;
 
-
-let loadMoreBoton3 = document.querySelector('#load-more-3');
-let currentItem3 = 4;
-
-loadMoreBoton3.onclick  = () => {
-    let boxes = [...document.querySelectorAll (
-        '.box-container-3 .box-3'
-    )];
-    for( let i = currentItem3; i < currentItem3 + 4; i++) {
-        boxes[i].style.display = 'inline-block';
+    loadMoreBoton3.onclick = () => {
+        let boxes = Array.from(document.querySelectorAll('.box-container-3 .box-3'));
+        for (let i = currentItem3; i < currentItem3 + 4; i++) {
+            boxes[i].style.display = 'inline-block';
+        }
+        currentItem3 += 4;
+        if (currentItem3 >= boxes.length) {
+            loadMoreBoton3.style.display = 'none';
+        }
     }
-    currentItem3 +=4;
-    if(currentItem3 >= boxes.length) {
-        loadMoreBoton3.style.display = 'none';
-    }
+});
 
-}
+
+const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); 
+
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+
+    const data = {
+        nombre: nombre,
+        email: email,
+        mensaje: mensaje
+    };
+
+
+    const jsonData = JSON.stringify(data);
+
+
+    localStorage.setItem('formularioContacto', jsonData);
+
+
+    form.reset();
+
+    alert('Datos del formulario enviados y almacenados en el Local Storage');
+});

@@ -275,6 +275,58 @@ hr {
     color: red;
 }
 
+.parrafo-contacto {
+    text-align: center;
+    font-size: 30px;
+    color: grey;
+}
+
+#contactForm {
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+label {
+    margin: 10px 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+button {
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    background-color: #e98009;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+        color: red;
+    }
+}
+
+.center-text {
+    text-align: center;
+}
+
+
 /* FOOTER */
 
 .footer {
@@ -357,45 +409,44 @@ hr {
         width: 100%;
     }
 
-        .boton-1 {
-            display: none;
-        }
+    .boton-1 {
+        display: none;
+    }
 
-        #menu:checked ~ .navbar {
-            display: initial;
-        }
+    #menu:checked~.navbar {
+        display: initial;
+    }
 
-        .header-content{
-            flex-direction: column;
-            padding: 180px 30px 30px 30px;
-        }
+    .header-content {
+        flex-direction: column;
+        padding: 180px 30px 30px 30px;
+    }
 
-        .header-1 {
-            width: 100%;
-            align-items: center;
-        }
+    .header-1 {
+        width: 100%;
+        align-items: center;
+    }
 
-        .header-2 {
-            width: 100%;
-            text-align: center;
-        }
+    .header-2 {
+        width: 100%;
+        text-align: center;
+    }
 
-        .movies {
-            padding: 30px 100px;
+    .movies {
+        padding: 30px 100px;
 
-        }
+    }
 
-        .footer {
-            margin-top: 30px;
-            padding: 30px;
-            flex-direction: column;
-            text-align: center;
-        }
+    .footer {
+        margin-top: 30px;
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
 
-        .footer ul {
-            margin-top: 15px;
-            justify-content: center;
-        }
+    .footer ul {
+        margin-top: 15px;
+        justify-content: center;
+    }
 
 }
-
