@@ -70,5 +70,16 @@ form.addEventListener('submit', function (event) {
 
     form.reset();
 
-    alert('Datos del formulario enviados y almacenados en el Local Storage');
-});
+    const btn = document.querySelector('#btn');
+
+    btn.addEventListener('click', miAlerta);
+    
+    function miAlerta() {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Enviado! Muchas Gracias',
+            showConfirmButton: false,
+            timer: 1500
+        });
+    }});
