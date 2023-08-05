@@ -1,3 +1,4 @@
+//showError('Ha ocurrido un error al cargar los datos...');
 const result = document.querySelector('.result');
 const form = document.querySelector('.get-weather');
 const nameCity = document.querySelector('#city');
@@ -12,11 +13,12 @@ form.addEventListener('submit', (e) => {
     }
 
     callAPI(nameCity.value, nameCountry.value);
+
 })
 
-function callAPI(city, country){
+function callAPI(city, country) {
     const apiId = '41d1d7f5c2475b3a16167b30bc4f265c';
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiId}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiId}`;
 
     fetch(url)
         .then(data => {
@@ -29,14 +31,15 @@ function callAPI(city, country){
                 clearHTML();
                 showWeather(dataJSON);
             }
+
         })
         .catch(error => {
-            showError('Ha ocurrido un error al cargar los datos...');
+            console.log(error);
         })
 }
 
-function showWeather(data){
-    const {name, main:{temp, temp_min, temp_max}, weather:[arr]} = data;
+function showWeather(data) {
+    const { name, main: { temp, temp_min, temp_max }, weather: [arr] } = data;
 
     const degrees = kelvinToCentigrade(temp);
     const min = kelvinToCentigrade(temp_min);
@@ -55,7 +58,8 @@ function showWeather(data){
 
 }
 
-function showError(message){
+function showError(message) {
+    
     const alert = document.createElement('p');
     alert.classList.add('alert-message');
     alert.innerHTML = message;
@@ -66,10 +70,10 @@ function showError(message){
     }, 3000);
 }
 
-function kelvinToCentigrade(temp){
+function kelvinToCentigrade(temp) {
     return parseInt(temp - 273.15);
 }
 
-function clearHTML(){
+function clearHTML() {
     result.innerHTML = '';
 }
