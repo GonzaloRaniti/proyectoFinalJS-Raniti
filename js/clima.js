@@ -1,4 +1,3 @@
-//showError('Ha ocurrido un error al cargar los datos...');
 const result = document.querySelector('.result');
 const form = document.querySelector('.get-weather');
 const nameCity = document.querySelector('#city');
@@ -34,7 +33,7 @@ function callAPI(city, country) {
 
         })
         .catch(error => {
-            console.log(error);
+            showError('Ha ocurrido un error al cargar los datos...');
         })
 }
 
@@ -59,7 +58,7 @@ function showWeather(data) {
 }
 
 function showError(message) {
-    
+
     const alert = document.createElement('p');
     alert.classList.add('alert-message');
     alert.innerHTML = message;
